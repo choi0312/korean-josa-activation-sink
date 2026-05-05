@@ -1,9 +1,9 @@
 # 한국어 조사 Activation Sink 분석
 > [Research] 한국어 조사 중심 Activation Sink 및 양자화 민감도 분석
 
-본 레포지토리는 한국어 LLM 내부에서 **조사(postposition) 토큰이 문장 구조 정보를 과도하게 떠안는 activation sink로 작동하는지**를 정량적으로 분석하기 위한 연구 코드입니다. token-level activation, attention mass, layer-wise statistical test, matched fake activation quantization을 함께 측정합니다.
+한국어 LLM 내부에서 **조사(postposition) 토큰이 문장 구조 정보를 과도하게 떠안는 activation sink로 작동하는지**를 정량적으로 분석하기 위한 연구 코드입니다. token-level activation, attention mass, layer-wise statistical test, matched fake activation quantization을 함께 측정합니다.
 
-## 연구 요약
+## 요약
 
 한국어 조사는 주어, 목적어, 부사어 등 문장 성분 간 관계를 표시하는 기능어입니다. 본 연구의 핵심 질문은 다음과 같습니다.
 
