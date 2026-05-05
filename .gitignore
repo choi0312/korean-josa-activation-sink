@@ -27,3 +27,19 @@ hf_cache/
 assets/tables/activation_token_metrics.csv
 assets/tables/attention_token_metrics.csv
 results/raw/
+
+# Research artifact policy
+# Keep only selected lightweight figures/tables under assets/.
+results/
+outputs/
+content/
+*.zip
+*.tar
+*.tar.gz
+*.pt
+*.pth
+*.bin
+*.safetensors
+assets/tables/activation_token_metrics.csv
+assets/tables/attention_token_metrics.csv
+assets/tables/matched_fake_activation_quant_probe_raw.csv

@@ -1,0 +1,35 @@
+{
+  "description": "Selected lightweight artifacts for README and research inspection.",
+  "figures": [
+    "layerwise_josa_minus_nonjosa_activation_max_abs.png",
+    "layerwise_josa_minus_nonjosa_activation_zmax.png",
+    "layerwise_josa_minus_nonjosa_attention_future_mean.png",
+    "last_layer_activation_max_abs_boxplot.png",
+    "last_layer_attention_future_mean_boxplot.png",
+    "fake_quant_delta_loss_per_token_by_layer.png",
+    "fake_quant_overall_delta_loss_per_token_bar.png"
+  ],
+  "tables": [
+    "significance_summary.csv",
+    "stats_activation_max_abs.csv",
+    "stats_activation_zmax.csv",
+    "stats_attention_future_mean.csv",
+    "matched_fake_activation_quant_probe_overall.csv",
+    "matched_fake_activation_quant_probe_summary.csv",
+    "control_position_length_summary.csv",
+    "ols_control_summary_last_layer.csv"
+  ],
+  "json": [
+    "final_summary.json",
+    "alignment_diagnostics.json",
+    "model_info.json",
+    "environment_and_config.json"
+  ],
+  "excluded_policy": [
+    "raw token-level activation table",
+    "raw token-level attention table",
+    "full result zip",
+    "model checkpoints",
+    "large cache files"
+  ]
+}
