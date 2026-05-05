@@ -1,9 +1,4 @@
 # 한국어 조사 Activation Sink 분석
-
-> [Research] Korean Postposition-Focused Activation Sink and Quantization Sensitivity Analysis
-
-> [Research] Korean Postposition-Focused Activation Sink and Quantization Sensitivity Analysis
-
 > [Research] 한국어 조사 중심 Activation Sink 및 양자화 민감도 분석
 
 본 레포지토리는 한국어 LLM 내부에서 **조사(postposition) 토큰이 문장 구조 정보를 과도하게 떠안는 activation sink로 작동하는지**를 정량적으로 분석하기 위한 연구 코드입니다. 단순 heatmap 기반 정성 분석을 넘어서, token-level activation, attention mass, layer-wise statistical test, matched fake activation quantization을 함께 측정합니다.
