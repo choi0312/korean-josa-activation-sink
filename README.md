@@ -13,8 +13,8 @@
 
 ## 결론
 
-| 가설 | 현재 실험 결과 | 해석 |
-|---|---:|---|
+| 가설 | 해석 |
+|---|---|
 | 조사 token의 activation peak가 더 큰가? | activation sink 가설은 비교적 강하게 지지됨 |
 | 조사 token이 attention sink인가? | attention mass 집중 근거는 약하거나 제한적임 |
 | 조사 token이 양자화에 더 민감한가? | selective fake quantization 기준에서 조사 token의 손실 민감도가 더 큼 |
