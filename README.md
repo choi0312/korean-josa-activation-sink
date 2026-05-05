@@ -1,7 +1,7 @@
 # 한국어 조사 Activation Sink 분석
 > [Research] 한국어 조사 중심 Activation Sink 및 양자화 민감도 분석
 
-본 레포지토리는 한국어 LLM 내부에서 **조사(postposition) 토큰이 문장 구조 정보를 과도하게 떠안는 activation sink로 작동하는지**를 정량적으로 분석하기 위한 연구 코드입니다. 단순 heatmap 기반 정성 분석을 넘어서, token-level activation, attention mass, layer-wise statistical test, matched fake activation quantization을 함께 측정합니다.
+본 레포지토리는 한국어 LLM 내부에서 **조사(postposition) 토큰이 문장 구조 정보를 과도하게 떠안는 activation sink로 작동하는지**를 정량적으로 분석하기 위한 연구 코드입니다. token-level activation, attention mass, layer-wise statistical test, matched fake activation quantization을 함께 측정합니다.
 
 ## 연구 요약
 
@@ -11,15 +11,15 @@
 
 이를 검증하기 위해 `Bllossom/llama-3.2-Korean-Bllossom-3B` 모델을 대상으로 KoNLPy 기반 형태소 분석 결과와 Hugging Face subword token을 정렬하고, 조사 중첩 token과 비조사 token의 내부 표현 차이를 비교했습니다.
 
-## 핵심 결론
+## 결론
 
 | 가설 | 현재 실험 결과 | 해석 |
 |---|---:|---|
-| 조사 token의 activation peak가 더 큰가? | `True` | activation sink 가설은 비교적 강하게 지지됨 |
-| 조사 token이 attention sink인가? | `False` | attention mass 집중 근거는 약하거나 제한적임 |
-| 조사 token이 양자화에 더 민감한가? | `True` | selective fake quantization 기준에서 조사 token의 손실 민감도가 더 큼 |
+| 조사 token의 activation peak가 더 큰가? | activation sink 가설은 비교적 강하게 지지됨 |
+| 조사 token이 attention sink인가? | attention mass 집중 근거는 약하거나 제한적임 |
+| 조사 token이 양자화에 더 민감한가? | selective fake quantization 기준에서 조사 token의 손실 민감도가 더 큼 |
 
-보수적인 결론은 다음과 같습니다.
+결론은 다음과 같습니다.
 
 > 한국어 조사는 일반적인 attention sink라기보다, **sparse activation sink 또는 quantization-sensitive structural carrier** 후보로 해석하는 것이 더 타당합니다.
 
@@ -123,29 +123,21 @@ Activation 지표는 여러 layer에서 JOSA token이 NON-JOSA token보다 큰 �
 
 JOSA token과 NON-JOSA token의 `max_abs` 차이를 layer별로 비교한 결과입니다.
 
-![Layer-wise JOSA minus NON-JOSA activation max_abs](/content/korean-josa-activation-sink/assets/figures/layerwise_josa_minus_nonjosa_activation_max_abs.png)
+<img width="1583" height="622" alt="image" src="https://github.com/user-attachments/assets/cd5a8b26-5808-4664-906c-c99a27547ecb" />
 
 ### 2. Layer-wise normalized outlier score 차이
 
 `zmax`는 layer별 activation scale 차이를 보정한 outlier score입니다.
 
-![Layer-wise JOSA minus NON-JOSA activation zmax](/content/korean-josa-activation-sink/assets/figures/layerwise_josa_minus_nonjosa_activation_zmax.png)
+<img width="1583" height="622" alt="image" src="https://github.com/user-attachments/assets/217a5110-b3f2-4aeb-b2f1-50ea70b5a46e" />
 
-### 3. Attention sink 비교
 
-Causal attention의 위치 편향을 줄이기 위해 future query에서 받은 attention만 정규화해 비교했습니다.
-
-![Layer-wise JOSA minus NON-JOSA future-normalized attention](/content/korean-josa-activation-sink/assets/figures/layerwise_josa_minus_nonjosa_attention_future_mean.png)
-
-### 4. Selective fake activation quantization
+### 3. Selective fake activation quantization
 
 동일 개수의 JOSA token과 NON-JOSA token을 선택해 hidden state만 fake quantization한 뒤 loss 증가량을 비교했습니다.
 
-![Matched fake quantization delta loss per token](/content/korean-josa-activation-sink/assets/figures/fake_quant_delta_loss_per_token_by_layer.png)
+<img width="1583" height="750" alt="image" src="https://github.com/user-attachments/assets/fcab9db5-7959-4103-91ba-488e96dee2de" />
 
-### 5. Last-layer POS별 activation 분포
-
-![Last layer activation distribution by POS](/content/korean-josa-activation-sink/assets/figures/last_layer_activation_max_abs_boxplot.png)
 
 ## 코드 구조
 
@@ -174,27 +166,12 @@ Colab A100 환경 기준:
 
     josa-sink-run --config configs/default.yaml
 
-## 선별된 결과물 정책
-
-본 레포지토리는 모든 raw result를 push하지 않습니다. GitHub에는 연구 내용을 빠르게 이해하는 데 필요한 핵심 산출물만 포함합니다.
-
-| 포함 | 제외 |
-|---|---|
-| 핵심 layer-wise figure | token-level raw activation table |
-| 핵심 quantization figure | token-level raw attention table |
-| summary CSV | 전체 zip 결과물 |
-| final summary JSON | model checkpoint / cache |
-| README 내 핵심 표 | 대용량 중간 산출물 |
-
-전체 결과가 필요한 경우 Colab 실행 후 생성되는 `/content/korean_josa_sink_results.zip`을 별도로 보관하는 것을 권장합니다.
 
 ## 해석상 주의점
 
-1. KoNLPy Okt는 native character offset을 제공하지 않으므로 형태소 span은 순차 문자열 매칭으로 복원했습니다.
-2. Hugging Face subword token은 명사와 조사를 하나의 token으로 병합할 수 있습니다. 따라서 본 연구의 JOSA label은 엄밀히 말해 `pure 조사 token`이 아니라 `조사와 character span이 겹치는 token`입니다.
-3. Attention sink 여부는 raw attention이 아니라 future-query-normalized received attention 기준으로 판단해야 합니다.
-4. Fake activation quantization은 분석용 perturbation이며, 실제 배포용 weight quantization과 동일하지 않습니다.
-5. 본 결과는 단일 한국어 LLM과 제한된 문장 집합에 대한 분석이므로, 후속 연구에서는 더 큰 corpus와 다른 한국어 LLM에서 재현 검증이 필요합니다.
+1. Attention sink 여부는 raw attention이 아니라 future-query-normalized received attention 기준으로 판단해야 합니다.
+2. Fake activation quantization은 분석용 perturbation이며, 실제 배포용 weight quantization과 동일하지 않습니다.
+3. 본 결과는 단일 한국어 LLM과 제한된 문장 집합에 대한 분석이므로, 후속 연구에서는 더 큰 corpus와 다른 한국어 LLM에서 재현 검증이 필요합니다.
 
 ## Citation / Related Concepts
 
