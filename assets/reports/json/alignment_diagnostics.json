@@ -1,0 +1,9 @@
+{
+  "n_sentences": 180,
+  "n_tokens_total": 2136,
+  "n_non_special_tokens": 1956,
+  "n_josa_tokens_any_overlap": 304,
+  "n_josa_tokens_strict": 295,
+  "n_alignment_no_overlap": 0,
+  "n_morph_low_confidence": 0
+}

@@ -1,0 +1,4 @@
+﻿analysis,sig_layers_fdr,total_layers_tested,last_layer_diff,last_layer_fdr_p
+activation_max_abs,14,28,2.4954107429728207,4.926636688472587e-19
+activation_zmax,14,28,1.998686142901914,5.14710126871302e-19
+attention_future_mean,9,28,-0.007800655163487152,1.0

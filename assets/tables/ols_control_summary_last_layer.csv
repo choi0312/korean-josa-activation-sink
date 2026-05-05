@@ -1,0 +1,6 @@
+﻿metric,label_col,n,coef_josa,p_value_HC3,ci_low,ci_high,r2,formula
+max_abs,is_josa_int,1956,2.579734394133685,3.379047292431978e-41,2.2036172291071257,2.9558515591602443,0.268449709657933,max_abs ~ is_josa_int + rel_pos + rel_pos_sq + char_len + seq_len + is_punct_or_symbol
+zmax,is_josa_int,1956,2.066224737478155,3.379099780086903e-41,1.7649756403737653,2.367473834582545,0.26844971072865886,zmax ~ is_josa_int + rel_pos + rel_pos_sq + char_len + seq_len + is_punct_or_symbol
+norm,is_josa_int,1956,-1.5879163822697762,9.390955056858708e-182,-1.6961735948925227,-1.4796591696470296,0.5097414577726963,norm ~ is_josa_int + rel_pos + rel_pos_sq + char_len + seq_len + is_punct_or_symbol
+received_attn_future_mean,is_josa_int,1776,-0.0013637447848640042,0.000996885343683714,-0.002175826933325096,-0.0005516626364029121,0.6395609282478638,received_attn_future_mean ~ is_josa_int + rel_pos + rel_pos_sq + char_len + seq_len + is_punct_or_symbol
+attn_sink_z_future,is_josa_int,1776,-0.00491167028973457,0.051240708409539294,-0.009849809501292935,2.6468921823796093e-05,0.8461113943102327,attn_sink_z_future ~ is_josa_int + rel_pos + rel_pos_sq + char_len + seq_len + is_punct_or_symbol

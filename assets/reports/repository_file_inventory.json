@@ -1,0 +1,306 @@
+[
+  {
+    "path": ".gitignore",
+    "size_kb": 0.33
+  },
+  {
+    "path": "LICENSE",
+    "size_kb": 1.03
+  },
+  {
+    "path": "requirements.txt",
+    "size_kb": 0.15
+  },
+  {
+    "path": "pyproject.toml",
+    "size_kb": 0.7
+  },
+  {
+    "path": "README.md",
+    "size_kb": 3.65
+  },
+  {
+    "path": "tests/test_import.py",
+    "size_kb": 0.08
+  },
+  {
+    "path": "configs/default.yaml",
+    "size_kb": 0.72
+  },
+  {
+    "path": "notebooks/README.md",
+    "size_kb": 0.27
+  },
+  {
+    "path": "scripts/run_full_experiment.py",
+    "size_kb": 0.52
+  },
+  {
+    "path": "scripts/colab_setup.sh",
+    "size_kb": 0.31
+  },
+  {
+    "path": "assets/figures/sentence_18_attention_future_mean_heatmap.png",
+    "size_kb": 42.36
+  },
+  {
+    "path": "assets/figures/fake_quant_delta_loss_by_layer.png",
+    "size_kb": 125.75
+  },
+  {
+    "path": "assets/figures/sentence_22_activation_max_abs_heatmap.png",
+    "size_kb": 36.3
+  },
+  {
+    "path": "assets/figures/pos_count_alignment.png",
+    "size_kb": 63.41
+  },
+  {
+    "path": "assets/figures/last_layer_activation_zmax_boxplot.png",
+    "size_kb": 65.36
+  },
+  {
+    "path": "assets/figures/sentence_24_activation_max_abs_local_josa_window.png",
+    "size_kb": 40.92
+  },
+  {
+    "path": "assets/figures/sentence_22_activation_max_abs_local_josa_window.png",
+    "size_kb": 39.8
+  },
+  {
+    "path": "assets/figures/sentence_18_activation_max_abs_local_josa_window.png",
+    "size_kb": 38.41
+  },
+  {
+    "path": "assets/figures/last_layer_attention_future_mean_boxplot.png",
+    "size_kb": 72.75
+  },
+  {
+    "path": "assets/figures/sentence_18_activation_max_abs_heatmap.png",
+    "size_kb": 35.07
+  },
+  {
+    "path": "assets/figures/sentence_20_activation_max_abs_heatmap.png",
+    "size_kb": 34.34
+  },
+  {
+    "path": "assets/figures/layerwise_josa_minus_nonjosa_attention_future_mean.png",
+    "size_kb": 71.07
+  },
+  {
+    "path": "assets/figures/sentence_19_attention_future_mean_heatmap.png",
+    "size_kb": 42.61
+  },
+  {
+    "path": "assets/figures/sentence_21_attention_future_mean_heatmap.png",
+    "size_kb": 40.77
+  },
+  {
+    "path": "assets/figures/layerwise_josa_minus_nonjosa_activation_max_abs.png",
+    "size_kb": 53.61
+  },
+  {
+    "path": "assets/figures/sentence_19_activation_max_abs_heatmap.png",
+    "size_kb": 35.13
+  },
+  {
+    "path": "assets/figures/sentence_20_attention_future_mean_heatmap.png",
+    "size_kb": 42.9
+  },
+  {
+    "path": "assets/figures/sentence_22_attention_future_mean_heatmap.png",
+    "size_kb": 44.25
+  },
+  {
+    "path": "assets/figures/sentence_24_attention_future_mean_heatmap.png",
+    "size_kb": 45.59
+  },
+  {
+    "path": "assets/figures/sentence_21_activation_max_abs_heatmap.png",
+    "size_kb": 34.51
+  },
+  {
+    "path": "assets/figures/sentence_19_activation_max_abs_local_josa_window.png",
+    "size_kb": 38.46
+  },
+  {
+    "path": "assets/figures/fake_quant_overall_delta_loss_per_token_bar.png",
+    "size_kb": 62.92
+  },
+  {
+    "path": "assets/figures/sentence_20_activation_max_abs_local_josa_window.png",
+    "size_kb": 37.93
+  },
+  {
+    "path": "assets/figures/last_layer_activation_max_abs_boxplot.png",
+    "size_kb": 62.22
+  },
+  {
+    "path": "assets/figures/sentence_21_activation_max_abs_local_josa_window.png",
+    "size_kb": 38.01
+  },
+  {
+    "path": "assets/figures/layerwise_josa_minus_nonjosa_activation_zmax.png",
+    "size_kb": 63.87
+  },
+  {
+    "path": "assets/figures/sentence_24_activation_max_abs_heatmap.png",
+    "size_kb": 37.55
+  },
+  {
+    "path": "assets/figures/fake_quant_delta_loss_per_token_by_layer.png",
+    "size_kb": 142.57
+  },
+  {
+    "path": "assets/reports/final_report.md",
+    "size_kb": 6.41
+  },
+  {
+    "path": "assets/tables/matched_fake_activation_quant_probe_overall.csv",
+    "size_kb": 0.52
+  },
+  {
+    "path": "assets/tables/last_layer_pos_activation_summary.csv",
+    "size_kb": 0.9
+  },
+  {
+    "path": "assets/tables/stats_activation_outlier_ratio.csv",
+    "size_kb": 3.97
+  },
+  {
+    "path": "assets/tables/layer_activation_calibration_stats.csv",
+    "size_kb": 2.38
+  },
+  {
+    "path": "assets/tables/file_inventory.csv",
+    "size_kb": 3.08
+  },
+  {
+    "path": "assets/tables/matched_fake_activation_quant_probe_summary.csv",
+    "size_kb": 2.13
+  },
+  {
+    "path": "assets/tables/last_layer_pos_attention_summary.csv",
+    "size_kb": 0.83
+  },
+  {
+    "path": "assets/tables/significance_summary.csv",
+    "size_kb": 0.25
+  },
+  {
+    "path": "assets/tables/ols_control_summary_last_layer.csv",
+    "size_kb": 1.16
+  },
+  {
+    "path": "assets/tables/stats_attention_future_mean.csv",
+    "size_kb": 4.08
+  },
+  {
+    "path": "assets/tables/control_position_length_summary.csv",
+    "size_kb": 3.05
+  },
+  {
+    "path": "assets/tables/stats_activation_max_abs.csv",
+    "size_kb": 3.51
+  },
+  {
+    "path": "assets/tables/stats_attention_z_future.csv",
+    "size_kb": 3.88
+  },
+  {
+    "path": "assets/tables/stats_activation_zmax.csv",
+    "size_kb": 3.44
+  },
+  {
+    "path": "assets/tables/stats_activation_norm.csv",
+    "size_kb": 3.79
+  },
+  {
+    "path": "assets/tables/strict_josa_sensitivity_summary.csv",
+    "size_kb": 0.21
+  },
+  {
+    "path": "assets/tables/corpus.csv",
+    "size_kb": 9.02
+  },
+  {
+    "path": "assets/reports/json/final_summary.json",
+    "size_kb": 4.85
+  },
+  {
+    "path": "assets/reports/json/environment_and_config.json",
+    "size_kb": 1.12
+  },
+  {
+    "path": "assets/reports/json/model_info.json",
+    "size_kb": 0.32
+  },
+  {
+    "path": "assets/reports/json/alignment_diagnostics.json",
+    "size_kb": 0.21
+  },
+  {
+    "path": "src/josa_sink/pipeline.py",
+    "size_kb": 8.1
+  },
+  {
+    "path": "src/josa_sink/config.py",
+    "size_kb": 2.15
+  },
+  {
+    "path": "src/josa_sink/cli.py",
+    "size_kb": 0.33
+  },
+  {
+    "path": "src/josa_sink/calibration.py",
+    "size_kb": 2.29
+  },
+  {
+    "path": "src/josa_sink/__init__.py",
+    "size_kb": 0.02
+  },
+  {
+    "path": "src/josa_sink/corpus.py",
+    "size_kb": 5.42
+  },
+  {
+    "path": "src/josa_sink/reporting.py",
+    "size_kb": 5.33
+  },
+  {
+    "path": "src/josa_sink/quant_probe.py",
+    "size_kb": 7.32
+  },
+  {
+    "path": "src/josa_sink/collate.py",
+    "size_kb": 1.46
+  },
+  {
+    "path": "src/josa_sink/modeling.py",
+    "size_kb": 2.08
+  },
+  {
+    "path": "src/josa_sink/visualization.py",
+    "size_kb": 2.71
+  },
+  {
+    "path": "src/josa_sink/attention.py",
+    "size_kb": 4.56
+  },
+  {
+    "path": "src/josa_sink/morph_align.py",
+    "size_kb": 5.79
+  },
+  {
+    "path": "src/josa_sink/stats.py",
+    "size_kb": 3.42
+  },
+  {
+    "path": "src/josa_sink/utils.py",
+    "size_kb": 0.85
+  },
+  {
+    "path": "src/josa_sink/activation.py",
+    "size_kb": 3.91
+  }
+]

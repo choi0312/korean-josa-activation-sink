@@ -1,0 +1,2 @@
+[console_scripts]
+josa-sink-run = josa_sink.cli:main

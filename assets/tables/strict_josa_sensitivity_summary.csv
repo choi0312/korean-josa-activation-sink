@@ -1,0 +1,3 @@
+﻿metric,primary_sig_layers,strict_sig_layers,primary_last_diff,strict_last_diff
+activation_max_abs,14,13,2.4954107429728207,2.4730641776575046
+attention_future_mean,9,9,-0.007800655163487152,-0.0079030235881421

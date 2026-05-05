@@ -1,0 +1,16 @@
+torch
+transformers>=4.46.0
+accelerate
+bitsandbytes
+sentencepiece
+huggingface_hub
+konlpy
+JPype1
+scipy
+statsmodels
+pandas
+numpy
+matplotlib
+tqdm
+pyyaml
+psutil
